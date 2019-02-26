@@ -1,0 +1,1 @@
+C:/wamp64/www/Project4-Inhabitent-New/wordpress/wp-content/plugins/query-monitor/wp-content/db.php
