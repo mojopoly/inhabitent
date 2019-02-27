@@ -1,9 +1,9 @@
+@charset "UTF-8";
 .header-search {
   line-height: 1;
   padding-left: 1.5rem;
 }
 .header-search label {
-  display: none;
   float: left;
   margin: 0;
 }
@@ -17,7 +17,6 @@
 }
 .header-search input[type=search] {
   border: 0;
-  background: transparent;
   font-family: Novecento Sans Web, sans-serif;
   margin-left: 0.75rem;
   padding: 0 0.3rem;
@@ -28,7 +27,6 @@
   background-color: transparent;
   border-bottom: 0;
   position: absolute;
-  text-shadow: 1px 1px 2px #323232;
 }
 .site-header.reverse-header h1 {
   background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/inhabitent-logo-tent-white.svg) no-repeat;
@@ -36,6 +34,24 @@
 }
 .site-header.reverse-header .main-navigation a {
   color: #fff;
+}
+
+body:not(.page-template-front-page) .site-header.reverse-header h1 {
+  background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/inhabitent-logo-tent.svg) no-repeat;
+  background-size: 50px 33px;
+}
+body:not(.page-template-front-page) .site-header.reverse-header .main-navigation a {
+  color: #248a83;
+}
+
+body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0.5rem 0;
+  position: fixed;
+  transition: top 0.5s linear;
+  width: 100%;
+  z-index: 3;
 }
 
 .site-header {
@@ -62,7 +78,7 @@
 }
 .site-header nav ul li.current-menu-item a:link,
 .site-header nav ul li.current-menu-item a:visited {
-  background-color: #006ec3;
+  background-color: lightblue;
   color: #fff;
 }
 
@@ -214,6 +230,10 @@
   margin-top: 0;
 }
 
+.page-template-page-about .entry-header-main {
+  height: 100vh;
+}
+
 .page-template-default .about-container .entry-content h2 {
   text-align: center;
 }
@@ -228,7 +248,7 @@
   width: 1120px;
 }
 
-.post-type_archive-product .page-header, .tax-product_type .page-header {
+.post-type-archive-product .page-header, .tax-product-type .page-header {
   border-bottom: 1px dashed #c8c8c8;
   margin-bottom: 3rem;
   text-align: center;
@@ -309,6 +329,10 @@
   font-size: 0.75rem;
 }
 
+.widget h2 {
+  font-size: 1.5rem;
+}
+
 .home .adventures li:first-child:before {
   padding-bottom: calc(100% - 24px);
 }
@@ -380,6 +404,14 @@
   text-align: center;
 }
 
+.page-template-about .entry-content {
+  margin-top: 0;
+}
+
+.page-template-page-about .entry-header h1 {
+  display: none;
+}
+
 .home .latest-entries .wp-post-image {
   left: 50%;
   max-height: 250px;
@@ -430,7 +462,7 @@ label {
   color: #fff;
   cursor: pointer;
   font-family: Novecento Sans Web, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -439,7 +471,7 @@ label {
 
 .white-btn {
   position: absolute;
-  top: 10rem;
+  top: 13rem;
   left: 1.5rem;
   border: 1px solid #fff;
   color: white;
@@ -482,24 +514,44 @@ fieldset {
   display: table;
 }
 
-.home .site-content, .page-template-about .page-template-default .site-content, .single-adventure .site-content {
+.page-template-page-about .entry-header-main h1 {
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home .site-content, .page-template-page-about .page-template-default .site-content, .single-adventure .site-content {
   padding-top: 0;
 }
 
-body:not(.home):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
+body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 1120px;
 }
 
-body:not(.home):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.tax-product_type) .content-area {
+#post-12 h1 {
+  background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/about-hero.jpg) no-repeat top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+#post-12 h1 .entry-content {
+  align-content: center;
+}
+
+body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.tax-product_type) .content-area {
   border-right: 1px solid #e1e1e1;
   padding-right: 5%;
   width: 73%;
 }
 
-body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
+body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -547,6 +599,49 @@ body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, 
   text-align: center;
 }
 
+body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .widget-area {
+  padding-left: 5%;
+  width: 27%;
+}
+
+.widget {
+  margin: 0 0 3rem;
+}
+
+.widget .contact-meta {
+  display: flex;
+}
+
+.widget a {
+  color: #248a83;
+  text-decoration: none;
+}
+
+.widget ul {
+  list-style-type: none;
+}
+
+.widget p {
+  margin-bottom: 0.5rem;
+}
+
+.widget .contact-meta i {
+  line-height: 1.8;
+  margin-right: 0.5rem;
+  width: 20px;
+}
+
+.fa-phone:before {
+  content: "";
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+}
+
 .site-footer {
   background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/dark-wood.png);
   background-size: 512px 512px;
@@ -587,6 +682,81 @@ body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, 
 .footer-block-item:last-child {
   padding-right: 0;
   width: 50%;
+}
+
+.post-type-archive-adventure .page-header {
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.adventure-grid-item {
+  position: relative;
+}
+
+.adventure-grid-item:before {
+  content: "";
+  float: left;
+  padding-top: 100%;
+}
+
+.adventure-grid-item .story-wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.adventure-grid-item img {
+  left: 50%;
+  max-height: 550px;
+  max-width: none;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.adventure-grid-item .story-info {
+  margin: 4.5rem 1.5rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.adventure-grid-item .story-wrapper:after {
+  background: rgba(0, 0, 0, 0.35);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.adventure-grid-item h2 {
+  font-family: Merriweather Web, serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 4.5rem;
+  text-transform: none;
+  color: #fff;
+}
+
+.adventure-grid-item h2 a {
+  color: #fff;
 }
 
 /*!
@@ -663,7 +833,7 @@ body {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
+  font-size: 2.4em;
   margin: 0.67em 0;
 }
 
@@ -1061,10 +1231,6 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul, ol {
-  margin: 0 0 1.5em 3em;
-}
-
 ul {
   list-style: disc;
 }
@@ -1312,11 +1478,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
-}
-
 .widget select {
   max-width: 100%;
 }

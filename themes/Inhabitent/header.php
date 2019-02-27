@@ -43,17 +43,12 @@
 			) );
 			?>
 			<div class="header-search">
-				<form role="search" method="get" class="search-form" action="http://localhost/project4-inhabitent-new/wordpress/">
-					<fieldset>
-						<a href="#" class="search-toggle" aria-hidden="true">
-							<i class="fa fa-search"></i>
-						</a>
+
 
 						<?php 
 					 		get_search_form();
 						?>
-					</fieldset>
-				</form>
+
 			</div>
 			<!-- <div class="header-search">
 

@@ -25,6 +25,7 @@ get_header();
 				$terms = get_terms( array(
 					'taxonomy' => 'product_type',
 					'hide_empty' => false,
+					'number' => '16',
 				));
 
 				foreach ($terms as $term) : 
