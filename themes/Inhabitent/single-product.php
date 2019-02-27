@@ -15,18 +15,31 @@ get_header();
 
 		<?php
 		while ( have_posts() ) :
-			the_post();
+			the_post();?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation();
+				<div class="product-image-wrapper">
+					<?php the_post_thumbnail(); ?>
+				</div>
+				<div class="product-content-wrapper">
+					<header class="entry-header"> <h1> <?php the_title(); ?></h1> </header>
+					<div class="entry-content">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+						<p class="price"> 
+							<?php echo CFS()->get( 'price' );?>
+						</p>
+						<p>
+							<?php the_content(); ?>
+						</p>
+						<div class="social-buttons">
+							<button type="button" class="black-btn"><i class="fa fa-facebook"></i>Like</button>
+							<button type="button" class="black-btn"><i class="fa fa-twitter"></i>Tweet</button>
+							<button type="button" class="black-btn"><i class="fa fa-pinterest"></i>Pin</button>
+						</div>
+					</div>
+				</div>
 
-		endwhile; // End of the loop.
+		<?php endwhile; // End of the loop.
 		?>
 
 		</main><!-- #main -->

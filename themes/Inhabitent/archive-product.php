@@ -31,7 +31,7 @@ get_header();
 				foreach ($terms as $term) : 
 					?>
 						<li>
-							<a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?></a>
+							<a href="<?php echo get_term_link( $term ); ?>" class="btn-prod"><?php echo $term->name; ?></a>
 						</li>
 				<?php endforeach; ?>
 			</ul>

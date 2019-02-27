@@ -1,4 +1,32 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Novecento-Sans-Web";
+  src: url("fonts/Novecento-Sans-Web.eot");
+  src: url("fonts/Novecento-Sans-Web.eot?#iefix") format("embedded-opentype"), url("fonts/Novecento-Sans-Web.woff2") format("woff2"), url("fonts/Novecento-Sans-Web.woff") format("woff"), url("fonts/Novecento-Sans-Web.ttf") format("truetype"), url("fonts/Novecento-Sans-Web.svg#Raleway-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("fonts/Merriweather-Light.eot");
+  src: url("fonts/Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Merriweather-Light.woff2") format("woff2"), url("fonts/Merriweather-Light.woff") format("woff"), url("fonts/Merriweather-Light.ttf") format("truetype"), url("fonts/Merriweather-Light.svg#Raleway-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+h2 {
+  color: #2f1339;
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: Novecento-Sans-Web, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 .header-search {
   line-height: 1;
   padding-left: 1.5rem;
@@ -17,7 +45,7 @@
 }
 .header-search input[type=search] {
   border: 0;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
   margin-left: 0.75rem;
   padding: 0 0.3rem;
   text-transform: uppercase;
@@ -36,11 +64,11 @@
   color: #fff;
 }
 
-body:not(.page-template-front-page) .site-header.reverse-header h1 {
+body:not(.page-template-front-page):not(.page-template-page-about) .site-header.reverse-header h1 {
   background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/inhabitent-logo-tent.svg) no-repeat;
   background-size: 50px 33px;
 }
-body:not(.page-template-front-page) .site-header.reverse-header .main-navigation a {
+body:not(.page-template-front-page):not(.page-template-page-about) .site-header.reverse-header .main-navigation a {
   color: #248a83;
 }
 
@@ -242,6 +270,40 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
   display: none;
 }
 
+.single-product .product-content-wrapper, .single-product .product-image-wrapper {
+  width: 48%;
+}
+
+.single-product header {
+  color: #d99054;
+}
+
+.single-product .price {
+  font-family: Novecento-Sans-Web, sans-serif;
+  font-size: 1.8rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.single-product .site-main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.fa-twitter:before {
+  content: "";
+}
+
+.fa-facebook-f:before, .fa-facebook:before {
+  content: "";
+}
+
+.fa-pinterest:before {
+  content: "";
+}
+
 .prod-type, .container {
   margin-left: auto;
   margin-right: auto;
@@ -293,7 +355,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
   display: inline;
   font-size: 1rem;
   font-weight: 400;
-  font-family: Merriweather Web, serif;
+  font-family: Merriweather-Light, serif;
   letter-spacing: 0;
   line-height: 1.75;
   padding-right: 0.25rem;
@@ -307,7 +369,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 
 .product-type-list {
   display: flex;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
   font-size: 1.2rem;
   justify-content: center;
   list-style-type: none;
@@ -331,6 +393,27 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 
 .widget h2 {
   font-size: 1.5rem;
+}
+
+.page-template-page-about .entry-content > :not(header) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.home .adventures .story-info h3 {
+  font-family: Merriweather-Light, serif;
+  font-weight: 400;
+  margin-top: 24px;
+  text-transform: none;
+}
+
+.home h2 {
+  font-family: Merriweather-Light, serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 3.75rem;
+  text-align: center;
 }
 
 .home .adventures li:first-child:before {
@@ -359,7 +442,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 
 .home .adventures .story-wrapper img {
   left: 50%;
-  max-height: 550px;
+  max-height: 575px;
   max-width: none;
   position: absolute;
   top: 75%;
@@ -368,7 +451,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 }
 
 .home .adventures .story-info h3 {
-  font-family: Merriweather Web, serif;
+  font-family: Merriweather-Light, serif;
   font-weight: 400;
   margin-top: 24px;
   text-transform: none;
@@ -425,7 +508,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 label {
   color: #2f1339;
   display: block;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -438,6 +521,7 @@ label {
 .black-btn {
   border: 1px solid #000;
   color: #000;
+  padding-bottom: 5rem;
 }
 
 .black-btn {
@@ -446,7 +530,7 @@ label {
   color: #000;
   border-radius: 0;
   cursor: pointer;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1;
@@ -461,7 +545,20 @@ label {
   border-radius: 0;
   color: #fff;
   cursor: pointer;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-prod {
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: Novecento-Sans-Web, sans-serif;
   font-size: 1.2rem;
   line-height: 1;
   padding: 0.75rem 1.5rem;
@@ -477,7 +574,7 @@ label {
   color: white;
   border-radius: 0;
   cursor: pointer;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
   font-size: 0.9rem;
   line-height: 1;
   padding: 0.75rem 1.5rem;
@@ -493,7 +590,7 @@ input[type=submit] {
   border-radius: 0;
   color: #fff;
   cursor: pointer;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
   font-size: 0.9rem;
   line-height: 1;
   padding: 0.75rem 1.5rem;
@@ -533,8 +630,8 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 }
 
 #post-12 h1 {
-  background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/about-hero.jpg) no-repeat top;
-  background-size: cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/about-hero.jpg) no-repeat center bottom;
+  background-size: cover, cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,7 +677,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.si
   background-color: #248a83;
   color: #fff;
   display: inline-block;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: Novecento-Sans-Web, sans-serif;
   position: absolute;
   right: 0;
   text-transform: uppercase;
@@ -747,7 +844,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 }
 
 .adventure-grid-item h2 {
-  font-family: Merriweather Web, serif;
+  font-family: Merriweather-Light, serif;
   font-size: 3rem;
   font-weight: 400;
   margin-bottom: 4.5rem;
@@ -1147,7 +1244,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: Merriweather Web, serif;
+  font-family: Merriweather-Light, serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -1258,6 +1355,7 @@ img {
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */
+  margin-top: 1rem;
 }
 
 figure {

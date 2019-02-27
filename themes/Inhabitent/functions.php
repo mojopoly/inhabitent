@@ -162,6 +162,13 @@ function demotheme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'demotheme_scripts' );
 
+
+// function new_excerpt_more( $more ) {
+// 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+// }
+// add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
 /**
  * Implement the Custom Header feature.
  */
