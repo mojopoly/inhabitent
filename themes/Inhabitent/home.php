@@ -39,8 +39,11 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 				// get_template_part( 'template-parts/content', get_post_type() );
-				the_post_thumbnail();
-				the_excerpt(); ?>
+				the_post_thumbnail();?>
+				<h2 class="entry-title">
+					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title();?></a>
+				</h2>					
+				<?php the_excerpt(); ?> 
 				<a class= "black-btn"href="<?php echo get_permalink(); ?>">Read More</a>
 
 			<?php endwhile;

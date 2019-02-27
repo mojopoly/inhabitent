@@ -95,7 +95,7 @@ body:not(.page-template-front-page):not(.page-template-page-about) .site-header.
 
 }
 
-body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-header {
+body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-header {
  
     background-color: hsla(0,0%,100%,.85);
     border-bottom: 1px solid #e1e1e1;
@@ -695,10 +695,24 @@ fieldset {
 }
 
 //content.scss
+
+.blog .entry-header h2{
+	background-color: #248a83;
+    color: #fff;
+    font-size: 2.1rem;
+    left: 0;
+    padding: .75rem 1.5rem;
+    position: absolute;
+    margin-top: 2.25rem;
+    max-width: 75%;
+    top: 0;
+
+}
+
 .home .site-content, .page-template-page-about .page-template-default .site-content, .single-adventure .site-content {
     padding-top: 0;
 }
-body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
+body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -725,7 +739,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 
 }
 
-body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.page-template-default):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.tax-product_type) .content-area {
+body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure):not(.tax-product_type) .content-area {
     border-right: 1px solid #e1e1e1;
     padding-right: 5%;
     width: 73%;
@@ -733,7 +747,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.pa
 
 
 
-body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
+body:not(.home):not(.page-template-page-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-page-about):not(.single-adventure) .widget-area {
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
