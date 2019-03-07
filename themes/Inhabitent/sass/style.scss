@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 	// text-shadow: 1px 1px 2px #323232;
 
 	h1 {
-    background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/inhabitent-logo-tent-white.svg) no-repeat;
+    background: url(../../../uploads/2019/02/inhabitent-logo-text.svg) no-repeat;
     background-size: 50px 33px;
 	}	
 	.main-navigation a{
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body:not(.page-template-front-page):not(.page-template-page-about) .site-header.reverse-header {
 	h1 {
-		background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/inhabitent-logo-tent.svg) no-repeat;
+		background: url(../../../uploads/2019/02/inhabitent-logo-tent.svg) no-repeat;
 		background-size: 50px 33px;
 		}
 
@@ -121,7 +121,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.po
     }
 
     h1 {
-        background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/inhabitent-logo-tent.svg) no-repeat;
+        background: url(../../../uploads/2019/02/inhabitent-logo-tent.svg) no-repeat;
         background-size: 50px 33px;
         height: 33px;
         margin: 0;
@@ -194,7 +194,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.po
 .home {
     .home-hero{
         align-items: center;
-        background:  url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/home-hero.jpg) no-repeat top;
+        background:  url(../../../uploads/2019/02/home-hero.jpg) no-repeat top;
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -725,7 +725,7 @@ body:not(.home):not(.page-template-page-about):not(.page-template-about):not(.po
 
 #post-12 h1 {
 
-	background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/about-hero.jpg) no-repeat center bottom;
+	background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url(../../../uploads/2019/02/about-hero.jpg) no-repeat center bottom;
 	background-size: cover, cover;
 	display: flex;
 	align-items: center;
@@ -841,7 +841,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 
 //footer.scss
 .site-footer {
-    background: url(http://localhost/project4-inhabitent-new/wordpress/wp-content/uploads/2019/02/dark-wood.png);
+    background: url(../../../uploads/2019/02/dark-wood.png);
     background-size: 512px 512px;
     color: #fff;
     a {

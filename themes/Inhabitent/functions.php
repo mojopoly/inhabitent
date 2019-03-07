@@ -159,6 +159,18 @@ function demotheme_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('red_comments', get_template_directory_uri() . '/js/api.js', array('jquery'), false, true);
+	//below is the old way
+	// wp_localize_script('red_comments', 'red_vars', array(
+	// 	'ajax_url' => admin_url('admin-ajax.php'),
+	// 	'comment_nonce' => wp_create_nonce('red_comment_status'),
+	// 	'post_id' => get_the_ID()
+	wp_localize_script('red_comments', 'red_vars', array(
+		'rest_url' => esc_url_raw(rest_url()),
+		'wpapi_nonce' => wp_create_nonce('wp_rest'),
+		'post_id' => get_the_ID()
+	));
 }
 add_action( 'wp_enqueue_scripts', 'demotheme_scripts' );
 
@@ -192,7 +204,27 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-// if ( defined( 'JETPACK__VERSION' ) ) {
+ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-// }
+}
 
+
+// function red_comment_ajax() {
+// 	check_ajax_referer('red_comment_status', 'security');
+
+// 	if (!current_user_can('edit_posts')){
+// 		exit;
+// 	}
+
+// 	$id = $_POST['the_post_id'];
+
+// 	if (isset($id) && is_numeric($id)) {
+// 		$the_post = array(
+// 			'ID' => $id,
+// 			'comment_status' => 'closed'
+// 		);
+// 		wp_update_post($the_post);
+// 	}
+// 	exit;
+// }
+// add_action('wp_ajax_red_comment_ajax', 'red_comment_ajax');
